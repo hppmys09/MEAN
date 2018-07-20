@@ -23,6 +23,7 @@
   "homepage": "https://github.com/skashyapsri/MEAN#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "express-generator": "^4.16.0",
     "nodemon": "^1.18.3"
   }
 }
