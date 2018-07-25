@@ -1,27 +1,24 @@
-
-
 const express = require('express');
 const morgan = require('morgan');
-const path = require('path');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const routes = require('./routes/routes');
+
+mongoose.Promise = global.Promise;
+
 const app = express();
+
+mongoose.connect('mongodb://localhost:27017/user',{ useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
-app.get('/', (req,res) =>	{
-	res.sendFile(path.join(__dirname+'/index.html'));
+routes(app);
+
+app.use((err,req,res,next) =>	{
+	res.status(422).send({ status: false, error: err.message });
 });
-
-app.post('/',(req,res) =>	{
-	let email = req.body.email;
-	let password = req.body.password;
-	console.log(email);
-	res.send('Welcome '+email);
-});
-
-
 
 const ip = '127.0.0.1';
 
