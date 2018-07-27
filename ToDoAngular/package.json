@@ -1,0 +1,15 @@
+{
+  "name": "todo",
+  "version": "0.0.0",
+  "description": "Simple todo application.",
+  "main": "server.js",
+  "author": "Srikrishna S Kashyap",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.18.3",
+    "method-override": "~2.3.5"
+  }
+}
