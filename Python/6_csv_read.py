@@ -1,15 +1,18 @@
+
+
+
 import pandas as pd
-data = pd.read_csv('path/input.csv')
-print (data)
+data = pd.read_csv('6_csv_read.csv')
+#print (data)
 
 # Slice the result for first 5 rows
 #print (data[0:5]['salary'])
 
 # Use the multi-axes indexing funtion
-#print (data.loc[:,['salary','name']])
+print (data.loc[:,['salary','name']])
 
 # Use the multi-axes indexing funtion
 #print (data.loc[[1,3,5],['salary','name']])
 
-# Use the multi-axes indexing funtion
+# U0se the multi-axes indexing funtion
 #print (data.loc[2:6,['salary','name']])

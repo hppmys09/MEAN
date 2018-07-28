@@ -7,7 +7,7 @@ df = pd.DataFrame(np.random.randn(5, 3), index=['a', 'c', 'e', 'f',
 
 df = df.reindex(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])
 
-print (df)
+#print (df)
 
 #Check for Missing values
 #print (df['one'].isnull())
@@ -21,4 +21,4 @@ print (df)
 #print (df.fillna(method='bfill'))
 
 #Drop Missing Values
-#print (df.dropna())
+print (df.dropna())
