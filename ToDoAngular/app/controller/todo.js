@@ -20,5 +20,12 @@ module.exports = 	{
 			res.json(todo);
 		})
 		.catch(next);
+	},
+	delete(req,res,next)	{
+		ToDo.remove({ _id: req.params.todo_id})
+		.then(todo =>	{
+			res.json({"status": true});
+		})
+		.catch(next);
 	}
 }
